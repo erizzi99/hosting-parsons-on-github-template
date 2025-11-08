@@ -19,7 +19,7 @@ Re-arrange the blocks below so they print out "Hello World!"
 </p>
 <script type="text/javascript">
 (function() {
-  var initial = "print(\"Hello\")\n" +
+  var initial = "print(\"Hello\")\n" + "System.out.printl(\"ciao\")\n"+
     "print(\" \")\n" +
     "print(\"World\")\n" +
     "print(\"!\")";
