@@ -19,11 +19,11 @@ Re-arrange the blocks below so they print out "Hello World!"
 </p>
 <script type="text/javascript">
 (function() {
-  var initial = "print(\"Hello\")\n" + 
-    "System.out.print(\"ciao\")\n"+
-    "print(\" \")\n" +
-    "print(\"World\")\n" +
-    "print(\"!\")";
+"class ProgSaluta{\n" +
+"public static void main(String[] args){\n" +
+"System.out.println(&quot;Ciao a tutti&quot;);\n" +
+"    }\n" +
+    "}";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "p1-sortable",
     "max_wrong_lines": 10,
