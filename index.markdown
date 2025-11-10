@@ -18,15 +18,7 @@ Re-arrange the blocks below so they print out "Hello World!"<div id="hw-sortable
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "public class ProgHelloWorld{
-\n" +
-    "    public static void main (String[] args){
-\n" +
-    "        System.out.println(Hello World&quot;);
-\n" +
-    "    }
-\n" +
-    "}";
+  var initial = "public class ProgHelloWorld{\n" +"    public static void main (String[] args){\n" + "        System.out.println(Hello World&quot;); \n" +"    }\n" + "}";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "hw-sortable",
     "max_wrong_lines": 10,
