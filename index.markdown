@@ -7,8 +7,9 @@ title: Multiple Parson's Problems on One Page
 ---
 # Parsons Practice
 
-## Parsons 1 (Line Based Grader)
-Re-arrange the blocks below so they print out "Hello World!"<div id="hw-sortableTrash" class="sortable-code"></div> 
+## Parsons 1 (Hello World)
+Organizza i blocchi per stampare in output la stringa "Hello world"
+<div id="hw-sortableTrash" class="sortable-code"></div> 
 <div id="hw-sortableTrash" class="sortable-code"></div> 
 <div id="hw-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
