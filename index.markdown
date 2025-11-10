@@ -8,20 +8,18 @@ title: Multiple Parson's Problems on One Page
 # Parsons Practice
 
 ## Parsons 1 (Line Based Grader)
-Re-arrange the blocks below so they print out "Hello World!"
-
-<div id="java-sortableTrash" class="sortable-code"></div> 
-<div id="java-sortable" class="sortable-code"></div> 
+Re-arrange the blocks below so they print out "Hello World!"<div id="hw-sortableTrash" class="sortable-code"></div> 
+<div id="hw-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
 <p> 
-    <input id="java-feedbackLink" value="Get Feedback" type="button" /> 
-    <input id="java-newInstanceLink" value="Reset Problem" type="button" /> 
+    <input id="hw-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="hw-newInstanceLink" value="Reset Problem" type="button" /> 
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "System.out.print(&quot;Ciao&quot;); \n" + "System.out.print(&quot;a&quot;); \n" +  "System.out.print(&quot;Tutti&quot;)";
+  var initial = "class ProgHelloWorld{\n" +"public static void main(String[] args){\n" +"System.out.println(&quot;Hello World&quot;);\n" +" }\n" +"}";
   var parsonsPuzzle = new ParsonsWidget({
-    "sortableId": "java-sortable",
+    "sortableId": "hw-sortable",
     "max_wrong_lines": 10,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
@@ -32,16 +30,17 @@ Re-arrange the blocks below so they print out "Hello World!"
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
-  $("#java-newInstanceLink").click(function(event){ 
+  $("#hw-newInstanceLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.shuffleLines(); 
   }); 
-  $("#java-feedbackLink").click(function(event){ 
+  $("#hw-feedbackLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.getFeedback(); 
   }); 
 })(); 
-</script>## Parsons 2 (Variable Check Grader)
+</script>
+## Parsons 2 (Variable Check Grader)
 Construct a program that swaps the values of variables <code>x</code> and <code>y</code> using the helper variable <code>tmp</code>. You can change the names of the variables (<span class="jsparson-toggle"></span>) by clicking them.
 
 <div id="p2-sortableTrash" class="sortable-code"></div>
