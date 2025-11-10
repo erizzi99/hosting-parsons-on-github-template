@@ -9,6 +9,7 @@ title: Multiple Parson's Problems on One Page
 
 ## Parsons 1 (Line Based Grader)
 Re-arrange the blocks below so they print out "Hello World!"<div id="hw-sortableTrash" class="sortable-code"></div> 
+<div id="hw-sortableTrash" class="sortable-code"></div> 
 <div id="hw-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
 <p> 
@@ -17,7 +18,15 @@ Re-arrange the blocks below so they print out "Hello World!"<div id="hw-sortable
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "class ProgHelloWorld{\n" +"public static void main(String[] args){\n" +"System.out.println(&quot;Hello World&quot;);\n" +" }\n" +"}";
+  var initial = "public class ProgHelloWorld{
+\n" +
+    "    public static void main (String[] args){
+\n" +
+    "        System.out.println(Hello World&quot;);
+\n" +
+    "    }
+\n" +
+    "}";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "hw-sortable",
     "max_wrong_lines": 10,
