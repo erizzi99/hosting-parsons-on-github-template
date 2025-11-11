@@ -19,7 +19,7 @@ Organizza i blocchi per stampare in output la stringa "Hello world"
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "public class ProgHelloWorld{\n" +"    public static void main (String[] args){\n" + "        System.out.println(Hello World&quot;); \n" +"    }\n" + "}";
+  var initial = "public class ProgHelloWorld{\n" + "    public static void main (String[] args){\n" + "        System.out.println(Hello World&quot;); \n" + "    }\n" + "}";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "hw-sortable",
     "max_wrong_lines": 10,
@@ -53,7 +53,7 @@ Organizza i blocchi per stampare in output la stringa "Ciao a tutti" inserendo u
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "public class ProgCiao{\n" + "    public static void main(String[] args){ \n" + "        System.out.print(&quot;Ciao&quot;); \n" +"       System.out.println(&quot;&quot;); \n" + "        System.out.print(&quot;a&quot;);\n" +"        System.out.println(&quot;&quot;);\n" +"        System.out.print(&quot;tutti); \n" +"    }\n" + "}";
+  var initial = "public class ProgCiao{\n" + " public static void main(String[] args){ \n" + " System.out.print(&quot;Ciao&quot;); \n" + "       System.out.println(&quot;&quot;); \n" + "System.out.print(&quot;a&quot;);\n" + "System.out.println(&quot;&quot;);\n" + "System.out.print(&quot;tutti); \n" + "    }\n" + "}";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "Ct-sortable",
     "max_wrong_lines": 10,
