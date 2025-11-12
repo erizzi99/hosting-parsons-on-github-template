@@ -111,7 +111,41 @@ Riordina i blocchi per inizializzare la variabile a, assegnarle il valore 5, inc
   }); 
 })(); 
 </script>
+## Parsons 4 (Inizializzazione ed incremento #2)
+Riordina i blocchi per inizializzare la variabile a, assegnarle il valore 5, incrementarla di 1 e stampare a video il suo valore
 
+<div id="a2-sortableTrash" class="sortable-code"></div> 
+<div id="a2-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="a2-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="a2-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "int a = 5; \n" + "a += 1; \n" + "System.out.print(&quot;Valore di a: &quot;); \n" + "System.out.print(a);";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "a2-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "show_feedback": true
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#a2-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#a2-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
 
 ## Parsons 2 (Variable Check Grader)
 Construct a program that swaps the values of variables <code>x</code> and <code>y</code> using the helper variable <code>tmp</code>. You can change the names of the variables (<span class="jsparson-toggle"></span>) by clicking them.
