@@ -5,7 +5,7 @@
 layout: default
 title: Multiple Parson's Problems on One Page
 ---
-# Java Parsons problems
+# Java parson's problems
 
 ## Parsons 1 (Hello World)
 Organizza i blocchi per stampare in output la stringa "Hello world"
@@ -163,13 +163,7 @@ Riordina i blocchi per inizializzare la variabile a, assegnarle il valore 5, inc
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "int a = 5;
-\n" +
-    "a ++;
-\n" +
-    "System.out.print(&quot;Valore di a: &quot;);
-\n" +
-    "System.out.print(a);";
+  var initial = "int a = 5; \n" + "a ++; \n" + "System.out.print(&quot;Valore di a: &quot;); \n" + "System.out.print(a);";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "a3-sortable",
     "max_wrong_lines": 10,
