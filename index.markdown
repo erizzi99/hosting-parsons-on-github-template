@@ -44,18 +44,18 @@ Organizza i blocchi per stampare in output la stringa "Hello world"
 </script>
 ## Parsons 2 (Ciao a tutti)
 Organizza i blocchi per stampare in output la stringa "Ciao a tutti" inserendo una parola per riga
-<div id="Ct-sortableTrash" class="sortable-code"></div> 
-<div id="Ct-sortable" class="sortable-code"></div> 
+<div id="ct-sortableTrash" class="sortable-code"></div> 
+<div id="ct-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
 <p> 
-    <input id="Ct-feedbackLink" value="Get Feedback" type="button" /> 
-    <input id="Ct-newInstanceLink" value="Reset Problem" type="button" /> 
+    <input id="ct-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="ct-newInstanceLink" value="Reset Problem" type="button" /> 
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "public class ProgCiao{\n" + " public static void main(String[] args){ \n" + " System.out.print(&quot;Ciao&quot;); \n" + "       System.out.println(&quot;&quot;); \n" + "System.out.print(&quot;a&quot;);\n" + "System.out.println(&quot;&quot;);\n" + "System.out.print(&quot;tutti); \n" + "    }\n" + "}";
+  var initial = "System.out.print(&quot;Ciao&quot;);\n" + "System.out.println(&quot; &quot;); \n" + "System.out.print(&quot;a&quot;); \n" + "System.out.println(&quot; &quot;); \n" + "System.out.print(&quot;tutti&quot;);";
   var parsonsPuzzle = new ParsonsWidget({
-    "sortableId": "Ct-sortable",
+    "sortableId": "ct-sortable",
     "max_wrong_lines": 10,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
@@ -66,17 +66,16 @@ Organizza i blocchi per stampare in output la stringa "Ciao a tutti" inserendo u
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
-  $("#Ct-newInstanceLink").click(function(event){ 
+  $("#ct-newInstanceLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.shuffleLines(); 
   }); 
-  $("#Ct-feedbackLink").click(function(event){ 
+  $("#ct-feedbackLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.getFeedback(); 
   }); 
 })(); 
 </script>
-
 
 
 ## Parsons 2 (Variable Check Grader)
