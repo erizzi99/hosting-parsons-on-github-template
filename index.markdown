@@ -152,7 +152,7 @@ Riordina i blocchi per inizializzare la variabile a, assegnarle il valore 5, inc
 
 
 ## Parsons 5 (Inizializzazione ed incremento #3)
-Riordina i blocchi per inizializzare la variabile a, assegnarle il valore 5, incrementarla di 1 e stampare a video il suo valore
+Riordina i blocchi per inizializzare la variabile a, assegnarle il valore 5, incrementarla di 1 e stampare a video i
 
 
 
@@ -188,3 +188,40 @@ Riordina i blocchi per inizializzare la variabile a, assegnarle il valore 5, inc
   }); 
 })(); 
 </script>
+
+## Parsons 6 (Input linea di comando #1)
+Riordina i blocchi per creare un programma java che saluti un utente utilizzando il primo argomento passato dalla riga di comando.
+<div id="args1-sortableTrash" class="sortable-code"></div> 
+<div id="args1-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="args1-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="args1-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "public class ProgSaluta{\n" +"	public static void main(String[] args){ \n" + "		String nome = args[0]; \n" +
+    "		System.out.print(&quot;Buongiorno: &quot;+nome); \n" + "	} \n" + "}";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "args1-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "show_feedback": true
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#args1-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#args1-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
