@@ -4,8 +4,6 @@
 @import "{{ site.theme }}";
 
 .sortable-code {
-  width: 30%;
+  width: fit-content;
 }
-ul#ul-hw-sortable {
-    width: fit-content;
-}
+
