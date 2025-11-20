@@ -19,7 +19,7 @@ Organizza i blocchi per stampare in output la stringa "Hello world"
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "public class ProgHelloWorld{\n" + "    public static void main (String[] args){\n" + "        System.out.println("Hello World";); \n" + "    }\n" + "}";
+  var initial = "public class ProgHelloWorld{\n" + "    public static void main (String[] args){\n" + "        System.out.println(&quot Hello World &quot;); \n" + "    }\n" + "}";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "hw-sortable",
     "max_wrong_lines": 10,
