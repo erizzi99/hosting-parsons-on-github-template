@@ -225,3 +225,41 @@ Riordina i blocchi per creare un programma java che saluti un utente utilizzando
 })(); 
 </script>
 
+## Parsons 7 (Input da linea di comando #2)
+Riordina i blocchi per creare un programma java che stampi a video il primo ed il secondo  argomento passato dalla riga di comando.
+
+<div id="args2-sortableTrash" class="sortable-code"></div> 
+<div id="args2-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="args2-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="args2-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "public class Main {\n" + "    public static void main(String[] args){ \n" + "        String prima = args[0]; \n" + "        String seconda = args[1]; \n" + "        System.out.print( prima + &quot; &quot;+ seconda); \n" + "    } \n" + "} \n" + "String prima = args[1]; \n" + "#distractor \n" +
+    "String seconda = args[2];#distractor";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "args2-sortable",
+    "max_wrong_lines": 2,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "show_feedback": true,
+    "trashId": "args2-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#args2-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#args2-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
