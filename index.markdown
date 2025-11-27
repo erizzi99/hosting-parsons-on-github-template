@@ -244,8 +244,8 @@ Riordina i blocchi per creare un programma java che stampi a video il primo ed i
     "        System.out.print(nome + &quot; &quot;+ cognome); \n" +
     "    } \n" +
     "} \n" +
-    "String nome = args[1];#distractor" +
-    "String cognome = args[2];#distractor";
+    "String nome = args[1]; #distractor\n" +
+    "String cognome = args[2]; #distractor";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "args2-sortable",
     "max_wrong_lines": 10,
