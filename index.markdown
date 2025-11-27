@@ -226,7 +226,7 @@ Riordina i blocchi per creare un programma java che saluti un utente utilizzando
 </script>
 
 ## Parsons 7 (Input da linea di comando #2)
-Riordina i blocchi per creare un programma java che stampi a video il primo ed il secondo  argomento passato dalla riga di comando.
+Riordina i blocchi per creare un programma java che chieda all'utente di inserire due stringhe nome e cognome e poi di stamparle a video
 
 <div id="args2-sortableTrash" class="sortable-code"></div> 
 <div id="args2-sortable" class="sortable-code"></div> 
@@ -264,6 +264,51 @@ Riordina i blocchi per creare un programma java che stampi a video il primo ed i
       parsonsPuzzle.shuffleLines(); 
   }); 
   $("#args2-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+## Parsons 8 (Scanner #1)
+<div id="scanner1-sortableTrash" class="sortable-code"></div> 
+<div id="scanner1-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="scanner1-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="scanner1-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "import java.util.Scanner; \n" +
+    "public class ProgInput{ \n" +
+    "    public static void main(String args []){ \n" +
+    "        Scanner tastiera = new Scanner(System.in); \n" +
+    "        System.out.println(&quot;Inserisci il tuo nome&quot;); \n" +
+    "        String nome = tastiera.next(); \n" +
+    "        System.out.println(&quot;Inserisci il tuo cognome&quot;); \n" +
+    "        String cognome = tastiera.next(); \n" +
+    "        System.out.println(nome + &quot; &quot;+ cognome); \n" +
+    "        tastiera.close(); \n" +
+    "    } \n" +
+    "}";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "scanner1-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "show_feedback": true,
+    "trashId": "scanner1-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#scanner1-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#scanner1-feedbackLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.getFeedback(); 
   }); 
