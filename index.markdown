@@ -237,11 +237,28 @@ Riordina i blocchi per creare un programma java che stampi a video il primo ed i
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "public class Main {\n" + "    public static void main(String[] args){ \n" + "        String prima = args[0]; \n" + "        String seconda = args[1]; \n" + "        System.out.print( prima + &quot; &quot;+ seconda); \n" + "    } \n" + "} \n" + "String prima = args[1]; \n" + "#distractor \n" +
-    "String seconda = args[2];#distractor";
+  var initial = "public class ProgNomeCognome{
+\n" +
+    "    public static void main(String args[]){
+\n" +
+    "        String nome = args[0];
+\n" +
+    "        String cognome = args[1];
+\n" +
+    "        System.out.print(nome + &quot; &quot;+ cognome);
+\n" +
+    "    }
+\n" +
+    "}
+\n" +
+    "String nome = args[1];
+\n" +
+    "#distractor
+\n" +
+    "String cognome = args[2];#distractor";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "args2-sortable",
-    "max_wrong_lines": 2,
+    "max_wrong_lines": 10,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
     "can_indent": true,
@@ -262,4 +279,3 @@ Riordina i blocchi per creare un programma java che stampi a video il primo ed i
   }); 
 })(); 
 </script>
-
