@@ -6,6 +6,7 @@ layout: default
 title: Multiple Parson's Problems on One Page
 ---
 # Java parson's problems
+ [esercizi in Java](Java.markdown)
 # C parson's problems
 [esercizi in C](c.markdown)
 ## Parsons 1 (Hello World)
