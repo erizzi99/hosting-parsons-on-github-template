@@ -1,4 +1,4 @@
-## Parsons 1 (Hello World)
+## JAVA
 Organizza i blocchi per stampare in output la stringa "Hello world"
 <div id="hw-sortableTrash" class="sortable-code"></div> 
 <div id="hw-sortableTrash" class="sortable-code"></div> 
