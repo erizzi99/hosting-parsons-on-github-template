@@ -6,7 +6,8 @@ layout: default
 title: Multiple Parson's Problems on One Page
 ---
 # Java parson's problems
-
+# C parson's problems
+[esercizi in C](c.markdown)
 ## Parsons 1 (Hello World)
 Organizza i blocchi per stampare in output la stringa "Hello world"
 <div id="hw-sortableTrash" class="sortable-code"></div> 
