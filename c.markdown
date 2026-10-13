@@ -10,9 +10,9 @@ title: Multiple Parson's problems in C
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = `#include &lt;stdio.h&gt;
+  var initial = `#include \u003cstdio.h\u003e
 int main() {
-    printf("Hello World!");
+    printf("Hello World!\\n");
     return 0;
 }`;
   var parsonsPuzzle = new ParsonsWidget({
