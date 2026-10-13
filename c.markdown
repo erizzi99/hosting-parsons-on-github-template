@@ -39,7 +39,7 @@ int main() {
 })(); 
 </script>
 
-## INPUT DI UN DATO INTERO
+## INPUT DI UN NUMERO INTERO
 <div id="id-sortableTrash" class="sortable-code"></div> 
 <div id="id-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
@@ -82,6 +82,7 @@ int main() {
 </script>
 
 ## INPUT DI UN CARATTERE
+
 <div id="ic-sortableTrash" class="sortable-code"></div> 
 <div id="ic-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
