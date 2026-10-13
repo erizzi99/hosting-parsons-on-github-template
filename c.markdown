@@ -10,7 +10,7 @@ title: Multiple Parson's problems in C
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = `#include <stdio.h>
+  var initial = `#include &lt;stdio.h&gt;
 int main() {
     printf("Hello World!");
     return 0;
