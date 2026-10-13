@@ -10,14 +10,18 @@ title: Multiple Parson's problems in C
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = `#include &lt;stdio.h&gt;\n 
-   int main(){\n 
-       printf(&quot;Hello World&quot;);\n 
-       return 0; \n
-    }` ;
+  var initial = "#include &lt;stdio.h&gt;
+\n" +
+    "int main() {
+\n" +
+    "    printf(&quot;Hello World!\n&quot;);
+\n" +
+    "    return 0;
+\n" +
+    "}";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "hw-sortable",
-    "max_wrong_lines": 0,
+    "max_wrong_lines": 10,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
     "can_indent": true,
