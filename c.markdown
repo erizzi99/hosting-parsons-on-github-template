@@ -10,15 +10,9 @@ title: Multiple Parson's problems in C
 </p> 
 <script type="text/javascript"> 
 (function(){
-<<<<<<< HEAD
   var initial = `#include &lt;stdio.h&gt;\n + int main(){\n +    printf(&quot;Hello World&quot;);\n 
        return 0; +
     }` ;
-=======
-  var initial = `#include &lt;stdio.h&gt;\n  int main(){\n     printf(&quot;Hello World&quot;);\n 
-       return 0; 
-    }`;
->>>>>>> 488c35a279950090904cb31dfcf3bfbdb7f65d17
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "hw-sortable",
     "max_wrong_lines": 0,
