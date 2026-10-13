@@ -82,6 +82,7 @@ int main() {
 </script>
 
 ## INPUT DI UN CARATTERE
+
 <div id="ic-sortableTrash" class="sortable-code"></div> 
 <div id="ic-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
