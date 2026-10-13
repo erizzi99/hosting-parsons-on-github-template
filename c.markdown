@@ -38,3 +38,44 @@ int main() {
   }); 
 })(); 
 </script>
+## INPUT DI UN DATO INTERO
+<div id="id-sortableTrash" class="sortable-code"></div> 
+<div id="id-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="id-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="id-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = `#include \u003cstdio.h\u003e
+int main() {
+    int numero;
+    printf("Inserisci un numero intero: ");
+    scanf("%d", &numero);
+    printf("Hai inserito: %d", numero);
+    return 0;
+}`;
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "id-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "show_feedback": true,
+    "python3": true
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#id-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#id-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
