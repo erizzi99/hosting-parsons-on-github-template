@@ -80,3 +80,45 @@ int main() {
   }); 
 })(); 
 </script>
+
+## INPUT DI UN CARATTERE
+<div id="ic-sortableTrash" class="sortable-code"></div> 
+<div id="ic-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="ic-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="ic-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = `#include \u003cstdio.h\u003e
+int main() {
+    char carattere;
+    printf("Inserisci un carattere: ");
+    scanf(" %c", &carattere);
+    printf("Hai inserito: %c", carattere);
+    return 0;
+}`;
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "ic-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "show_feedback": true,
+    "python3": true
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#ic-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#ic-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
