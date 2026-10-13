@@ -12,7 +12,7 @@ title: Multiple Parson's problems in C
 (function(){
   var initial = `#include <stdio.h>
 int main() {
-    printf("Hello World!\\n");
+    printf("Hello World!");
     return 0;
 }`;
   var parsonsPuzzle = new ParsonsWidget({
