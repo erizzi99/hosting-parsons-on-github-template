@@ -38,6 +38,7 @@ int main() {
   }); 
 })(); 
 </script>
+
 ## INPUT DI UN DATO INTERO
 <div id="id-sortableTrash" class="sortable-code"></div> 
 <div id="id-sortable" class="sortable-code"></div> 
